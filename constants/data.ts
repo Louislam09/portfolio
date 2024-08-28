@@ -10,7 +10,7 @@ const meData = {
       email: "louislam09@hotmail.com",
     },
   },
-  employment_history: [
+  employmentHistory: [
     {
       title: "Frontend Developer",
       company: "Media Revolutions",
@@ -66,33 +66,33 @@ const meData = {
       phone: "+1 (829) 450-5444",
     },
   ],
+  projects: [
+    {
+      name: "Gestor de Gastos React App",
+      link: "https://administrar-presupuesto.netlify.app/",
+    },
+    {
+      name: "Candy Crush Game",
+      link: "https://louislam09.github.io/CombineFruits/",
+    },
+    {
+      name: "ConnectFour Game",
+      description:
+        "A multiplayer game created using FrontEnd HTML5 and CSS3, and BackEnd NodeJs with Express.js and Socket.io for player communication with integrated voice chat via PeerJS.",
+      link: "https://connect-four-09.herokuapp.com/",
+    },
+    {
+      name: "Santa Escritura",
+      description:
+        '"Santa Escritura" es tu compañero espiritual digital, brindando acceso fácil y rápido a textos sagrados. Explora versículos, busca libros y capítulos, y sumérgete en una experiencia de estudio espiritual en esta aplicación intuitiva y amigable.',
+      platform: "Google Play",
+      link: "https://play.google.com/store/apps/details?id=com.louislam09.bible",
+    },
+  ],
   links: {
     github: "https://github.com/Louislam09",
     linkedin:
       "https://www.linkedin.com/in/luis-alejandro-martinez-magallanes-643aba207",
-    projects: [
-      {
-        name: "Gestor de Gastos React App",
-        link: "https://administrar-presupuesto.netlify.app/",
-      },
-      {
-        name: "Candy Crush Game",
-        link: "https://louislam09.github.io/CombineFruits/",
-      },
-      {
-        name: "ConnectFour Game",
-        description:
-          "A multiplayer game created using FrontEnd HTML5 and CSS3, and BackEnd NodeJs with Express.js and Socket.io for player communication with integrated voice chat via PeerJS.",
-        link: "https://connect-four-09.herokuapp.com/",
-      },
-      {
-        name: "Santa Escritura",
-        description:
-          '"Santa Escritura" es tu compañero espiritual digital, brindando acceso fácil y rápido a textos sagrados. Explora versículos, busca libros y capítulos, y sumérgete en una experiencia de estudio espiritual en esta aplicación intuitiva y amigable.',
-        platform: "Google Play",
-        link: "https://play.google.com/store/apps/details?id=com.louislam09.bible",
-      },
-    ],
   },
   skills: [
     "Node.js",
@@ -117,7 +117,7 @@ const meData = {
     "MongoDB",
     "PostgreSQL",
   ],
-  languages: ["English", "French"],
+  languages: ["Spanish", "English", "French"],
 };
 
 export default meData;

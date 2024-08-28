@@ -94,7 +94,7 @@ export default function Portfolio() {
                     <h2 className="text-2xl font-bold mb-4">
                       Employment History
                     </h2>
-                    {meData.employment_history.map((job, index) => (
+                    {meData.employmentHistory.map((job, index) => (
                       <motion.div
                         key={job.company}
                         initial={{ opacity: 0, y: 20 }}
@@ -146,7 +146,7 @@ export default function Portfolio() {
                   <section>
                     <h2 className="text-2xl font-bold mb-4">Projects</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {meData.links.projects.map((project, index) => (
+                      {meData.projects.map((project, index) => (
                         <motion.div
                           key={project.name}
                           initial={{ opacity: 0, scale: 0.9 }}
