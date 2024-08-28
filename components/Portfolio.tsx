@@ -15,11 +15,13 @@ import {
   MapPin,
   ExternalLink,
 } from "lucide-react";
-import meData from "@/constants/data";
+import mockData from "@/constants/data";
+import { useLanguage } from "@/context/LanguageProvider";
 
 export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(false);
   const [activeTab, setActiveTab] = useState("experience");
+  const { currentLanguage: language } = useLanguage();
 
   const toggleDarkMode = () => setDarkMode(!darkMode);
 
@@ -38,10 +40,10 @@ export default function Portfolio() {
         <header className="flex flex-col sm:flex-row justify-between items-center mb-8">
           <div>
             <h1 className="text-3xl sm:text-4xl font-bold mb-2">
-              {meData.profile.name}
+              {mockData[language].profile.name}
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400">
-              {meData.profile.title}
+              {mockData[language].profile.title}
             </p>
           </div>
           <div className="flex items-center space-x-2 mt-4 sm:mt-0">
@@ -63,7 +65,7 @@ export default function Portfolio() {
           >
             <section className="mb-8">
               <h2 className="text-2xl font-bold mb-4">Profile</h2>
-              <p className="text-lg">{meData.profile.summary}</p>
+              <p className="text-lg">{mockData[language].profile.summary}</p>
             </section>
 
             <nav className="mb-8">
@@ -94,7 +96,7 @@ export default function Portfolio() {
                     <h2 className="text-2xl font-bold mb-4">
                       Employment History
                     </h2>
-                    {meData.employmentHistory.map((job, index) => (
+                    {mockData[language].employmentHistory.map((job, index) => (
                       <motion.div
                         key={job.company}
                         initial={{ opacity: 0, y: 20 }}
@@ -121,7 +123,7 @@ export default function Portfolio() {
                 {activeTab === "education" && (
                   <section>
                     <h2 className="text-2xl font-bold mb-4">Education</h2>
-                    {meData.education.map((edu, index) => (
+                    {mockData[language].education.map((edu, index) => (
                       <motion.div
                         key={edu.institution}
                         initial={{ opacity: 0, y: 20 }}
@@ -146,7 +148,7 @@ export default function Portfolio() {
                   <section>
                     <h2 className="text-2xl font-bold mb-4">Projects</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {meData.projects.map((project, index) => (
+                      {mockData[language].projects.map((project, index) => (
                         <motion.div
                           key={project.name}
                           initial={{ opacity: 0, scale: 0.9 }}
@@ -196,15 +198,15 @@ export default function Portfolio() {
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
                   <MapPin className="h-5 w-5" />
-                  <p>{meData.profile.contact.location}</p>
+                  <p>{mockData[language].profile.contact.location}</p>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="h-5 w-5" />
-                  <p>{meData.profile.contact.email}</p>
+                  <p>{mockData[language].profile.contact.email}</p>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Phone className="h-5 w-5" />
-                  <p>{meData.profile.contact.phone}</p>
+                  <p>{mockData[language].profile.contact.phone}</p>
                 </div>
               </div>
             </section>
@@ -214,7 +216,7 @@ export default function Portfolio() {
               <div className="space-y-2">
                 <Button variant="outline" className="w-full">
                   <a
-                    href={meData.links.github}
+                    href={mockData[language].links.github}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center"
@@ -224,7 +226,7 @@ export default function Portfolio() {
                 </Button>
                 <Button variant="outline" className="w-full">
                   <a
-                    href={meData.links.linkedin}
+                    href={mockData[language].links.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center"
@@ -238,7 +240,7 @@ export default function Portfolio() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold mb-4">Skills</h2>
               <div className="grid grid-cols-2 gap-2">
-                {meData.skills.map((skill, index) => (
+                {mockData[language].skills.map((skill, index) => (
                   <motion.div
                     key={skill}
                     initial={{ opacity: 0, scale: 0.5 }}
@@ -255,10 +257,10 @@ export default function Portfolio() {
             <section>
               <h2 className="text-2xl font-bold mb-4">Languages</h2>
               <div className="space-y-2">
-                {meData.languages.map((language, index) => (
-                  <div key={language}>
+                {mockData[language].languages.map((language, index) => (
+                  <div key={language.name}>
                     <div className="flex justify-between mb-1">
-                      <span>{language}</span>
+                      <span>{language.name}</span>
                       <span>{index === 0 ? "90%" : "30%"}</span>
                     </div>
                     <Progress value={index === 0 ? 90 : 30} className="h-2" />

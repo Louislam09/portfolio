@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
-import meData from "@/constants/data";
+import mockData from "@/constants/data";
+import { useLanguage } from "@/context/LanguageProvider";
 
 export function Education() {
+  const { currentLanguage: language } = useLanguage();
   return (
     <section>
       <h2 className="text-2xl font-bold mb-4">Education</h2>
-      {meData.education.map((edu, index) => (
+      {mockData[language].education.map((edu, index) => (
         <motion.div
           key={edu.institution}
           initial={{ opacity: 0, y: 20 }}

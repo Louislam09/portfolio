@@ -1,18 +1,20 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
-import meData from "@/constants/data";
+import mockData from "@/constants/data";
+import { useLanguage } from "@/context/LanguageProvider";
 
 interface ProjectsProps {
   darkMode: boolean;
 }
 
 export function Projects({ darkMode }: ProjectsProps) {
+  const { currentLanguage: language } = useLanguage();
   return (
     <section>
       <h2 className="text-2xl font-bold mb-4">Projects</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {meData.projects.map((project, index) => (
+        {mockData[language].projects.map((project, index) => (
           <motion.div
             key={project.name}
             initial={{ opacity: 0, scale: 0.9 }}

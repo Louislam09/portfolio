@@ -1,15 +1,17 @@
 import { motion } from "framer-motion";
-import meData from "@/constants/data";
+import mockData from "@/constants/data";
+import { useLanguage } from "@/context/LanguageProvider";
 
 interface ExperienceProps {
   darkMode: boolean;
 }
 
 export function Experience({ darkMode }: ExperienceProps) {
+  const { currentLanguage: language } = useLanguage();
   return (
     <section>
       <h2 className="text-2xl font-bold mb-4">Employment History</h2>
-      {meData.employmentHistory.map((job, index) => (
+      {mockData[language].employmentHistory.map((job, index) => (
         <motion.div
           key={job.company}
           initial={{ opacity: 0, y: 20 }}

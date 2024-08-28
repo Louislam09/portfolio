@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
-import meData from "@/constants/data";
+import mockData from "@/constants/data";
+import { useLanguage } from "@/context/LanguageProvider";
 
 export function Skills() {
+  const { currentLanguage: language } = useLanguage();
   return (
     <section className="mb-8">
       <h2 className="text-2xl font-bold mb-4">Skills</h2>
       <div className="grid grid-cols-2 gap-2">
-        {meData.skills.map((skill, index) => (
+        {mockData[language].skills.map((skill, index) => (
           <motion.div
             key={skill}
             initial={{ opacity: 0, scale: 0.5 }}
