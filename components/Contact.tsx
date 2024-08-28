@@ -1,4 +1,4 @@
-import mockData from "@/constants/data";
+import { mockData } from "@/constants/data";
 import { useLanguage } from "@/context/LanguageProvider";
 import { Mail, MapPin, Phone } from "lucide-react";
 

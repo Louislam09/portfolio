@@ -1,6 +1,6 @@
-import { describe } from "node:test";
+import { Apple, BookOpenText, HandCoins, Joystick } from "lucide-react";
 
-const mockData = {
+export const mockData = {
   en: {
     profile: {
       name: "Luis Alejandro Martinez Magallanes",
@@ -71,29 +71,36 @@ const mockData = {
     ],
     projects: [
       {
-        name: "💰 Gestor de Gastos",
-        description:
-          "Take control of your weekly spending with Gestor de Gastos. This intuitive budgeting tool, built to simplify financial management, allows you to set a budget and keep track of your expenses with ease. Designed with a clean interface and straightforward functionality, it’s the perfect companion for anyone looking to stay on top of their finances.",
-        link: "https://administrar-presupuesto.netlify.app/",
-      },
-      {
-        name: "🍓 Fruit Match Game",
-        description:
-          "A sleek, fast-paced puzzle game built with pure JavaScript. Match juicy fruits, strategize your moves, and enjoy smooth, dynamic gameplay with every click. Perfectly crafted for an engaging user experience, this game highlights my ability to blend fun with functionality.",
-        link: "https://louislam09.github.io/CombineFruits/",
-      },
-      {
-        name: "⏹️ ConnectFour Game",
-        description:
-          "A multiplayer game created using FrontEnd HTML5 and CSS3, and BackEnd NodeJs with Express.js and Socket.io for player communication with integrated voice chat via PeerJS.",
-        link: "https://github.com/Louislam09/connect-four",
-      },
-      {
-        name: "📖 Santa Escritura",
+        name: "Santa Escritura",
         description:
           '"Santa Escritura" es tu compañero espiritual digital, brindando acceso fácil y rápido a textos sagrados. Explora versículos, busca libros y capítulos, y sumérgete en una experiencia de estudio espiritual en esta aplicación intuitiva y amigable.',
         platform: "Google Play",
+        icon: <BookOpenText color="green" />,
         link: "https://play.google.com/store/apps/details?id=com.louislam09.bible",
+      },
+      {
+        name: "Gestor de Gastos",
+        description:
+          "Take control of your weekly spending with Gestor de Gastos. This intuitive budgeting tool, built to simplify financial management, allows you to set a budget and keep track of your expenses with ease. Designed with a clean interface and straightforward functionality, it’s the perfect companion for anyone looking to stay on top of their finances.",
+        icon: <HandCoins color="gold" />,
+
+        link: "https://administrar-presupuesto.netlify.app/",
+      },
+      {
+        name: "Fruit Match Game",
+        description:
+          "A sleek, fast-paced puzzle game built with pure JavaScript. Match juicy fruits, strategize your moves, and enjoy smooth, dynamic gameplay with every click. Perfectly crafted for an engaging user experience, this game highlights my ability to blend fun with functionality.",
+        icon: <Apple color="#fa0000" />,
+
+        link: "https://louislam09.github.io/CombineFruits/",
+      },
+      {
+        name: "ConnectFour Game",
+        description:
+          "A multiplayer game created using FrontEnd HTML5 and CSS3, and BackEnd NodeJs with Express.js and Socket.io for player communication with integrated voice chat via PeerJS.",
+        icon: <Joystick color="lightblue" />,
+
+        link: "https://github.com/Louislam09/connect-four",
       },
     ],
     links: {
@@ -200,29 +207,36 @@ const mockData = {
     ],
     projects: [
       {
-        name: "💰 Gestor de Gastos",
-        description:
-          "Toma control de tu gasto semanal con Gestor de Gastos. Esta herramienta de presupuesto intuitiva, diseñada para simplificar la gestión financiera, te permite establecer un presupuesto y llevar un seguimiento de tus gastos con facilidad. Diseñada con una interfaz limpia y funcionalidad sencilla, es el compañero perfecto para cualquier persona que busque mantenerse al tanto de sus finanzas.",
-        link: "https://administrar-presupuesto.netlify.app/",
-      },
-      {
-        name: "🍓 Fruit Match Game",
-        description:
-          "Un juego de rompecabezas elegante y rápido construido con JavaScript puro. Empareja frutas jugosas, planifica tus movimientos y disfruta de una jugabilidad fluida y dinámica con cada clic. Perfectamente elaborado para una experiencia de usuario atractiva, este juego destaca mi habilidad para combinar diversión con funcionalidad.",
-        link: "https://louislam09.github.io/CombineFruits/",
-      },
-      {
-        name: "⏹️ ConnectFour Game",
-        description:
-          "Un juego multijugador creado usando FrontEnd HTML5 y CSS3, y BackEnd NodeJs con Express.js y Socket.io para la comunicación entre jugadores con chat de voz integrado a través de PeerJS.",
-        link: "https://github.com/Louislam09/connect-four",
-      },
-      {
-        name: "📖 Santa Escritura",
+        name: "Santa Escritura",
         description:
           '"Santa Escritura" es tu compañero espiritual digital, brindando acceso fácil y rápido a textos sagrados. Explora versículos, busca libros y capítulos, y sumérgete en una experiencia de estudio espiritual con esta aplicación intuitiva y amigable.',
         platform: "Google Play",
+        icon: <BookOpenText color="green" />,
+
         link: "https://play.google.com/store/apps/details?id=com.louislam09.bible",
+      },
+      {
+        name: "Gestor de Gastos",
+        description:
+          "Toma HandCoins de tu gasto semanal con Gestor de Gastos. Esta herramienta de presupuesto intuitiva, diseñada para simplificar la gestión financiera, te permite establecer un presupuesto y llevar un seguimiento de tus gastos con facilidad. Diseñada con una interfaz limpia y funcionalidad sencilla, es el compañero perfecto para cualquier persona que busque mantenerse al tanto de sus finanzas.",
+        icon: <HandCoins color="gold" />,
+
+        link: "https://administrar-presupuesto.netlify.app/",
+      },
+      {
+        name: "Fruit Match Game",
+        description:
+          "Un juego de rompecabezas elegante y rápido construido con JavaScript puro. Empareja frutas jugosas, planifica tus movimientos y disfruta de una jugabilidad fluida y dinámica con cada clic. Perfectamente elaborado para una experiencia de usuario atractiva, este juego destaca mi habilidad para combinar diversión con funcionalidad.",
+        icon: <Apple color="#fa0000" />,
+        link: "https://louislam09.github.io/CombineFruits/",
+      },
+      {
+        name: "ConnectFour Game",
+        description:
+          "Un juego multijugador creado usando FrontEnd HTML5 y CSS3, y BackEnd NodeJs con Express.js y Socket.io para la comunicación entre jugadores con chat de voz integrado a través de PeerJS.",
+        icon: <Joystick color="lightblue" />,
+
+        link: "https://github.com/Louislam09/connect-four",
       },
     ],
     links: {
@@ -261,4 +275,4 @@ const mockData = {
   },
 };
 
-export default mockData;
+// export default mockData;

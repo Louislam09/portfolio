@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
-import mockData from "@/constants/data";
+import { ExternalLink, Joystick } from "lucide-react";
+// import { mockData } from "@/constants/data";
 import { useLanguage } from "@/context/LanguageProvider";
+import { mockData } from "@/constants/data";
 
 interface ProjectsProps {
   darkMode: boolean;
@@ -23,7 +24,10 @@ export function Projects({ darkMode }: ProjectsProps) {
             whileHover={{ scale: 1.05 }}
             className="p-4 rounded-lg bg-opacity-10 bg-purple-500"
           >
-            <h3 className="text-xl font-semibold">{project.name}</h3>
+            <h3 className="flex flex-row items-center gap-2 text-xl font-semibold">
+              <p>{project.icon}</p>
+              <p>{project.name}</p>
+            </h3>
             {project.description && (
               <p className="mt-2 text-sm">{project.description}</p>
             )}

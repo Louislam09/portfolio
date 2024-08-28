@@ -1,5 +1,5 @@
 import { Progress } from "@/components/ui/progress";
-import mockData from "@/constants/data";
+import { mockData } from "@/constants/data";
 import { useLanguage } from "@/context/LanguageProvider";
 
 export function Languages() {

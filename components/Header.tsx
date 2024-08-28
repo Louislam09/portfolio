@@ -1,6 +1,6 @@
 import { Switch } from "@/components/ui/switch";
 import { Moon, Sun } from "lucide-react";
-import mockData from "@/constants/data";
+import { mockData } from "@/constants/data";
 import { LanguageOption, useLanguage } from "@/context/LanguageProvider";
 import Image from "next/image";
 

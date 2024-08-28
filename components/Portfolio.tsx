@@ -15,7 +15,7 @@ import {
   MapPin,
   ExternalLink,
 } from "lucide-react";
-import mockData from "@/constants/data";
+import { mockData } from "@/constants/data";
 import { useLanguage } from "@/context/LanguageProvider";
 
 export default function Portfolio() {

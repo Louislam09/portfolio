@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin } from "lucide-react";
-import mockData from "@/constants/data";
+import { mockData } from "@/constants/data";
 import { useLanguage } from "@/context/LanguageProvider";
 
 interface LinksProps {
