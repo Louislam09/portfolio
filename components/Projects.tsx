@@ -4,6 +4,7 @@ import { ExternalLink, Joystick } from "lucide-react";
 // import { mockData } from "@/constants/data";
 import { useLanguage } from "@/context/LanguageProvider";
 import { mockData } from "@/constants/data";
+import Link from "next/link";
 
 interface ProjectsProps {
   darkMode: boolean;
@@ -31,7 +32,31 @@ export function Projects({ darkMode }: ProjectsProps) {
             {project.description && (
               <p className="mt-2 text-sm">{project.description}</p>
             )}
-            <Button
+            {project.name === "Santa Escritura" ? (
+              <Link href="/bible" passHref>
+                <Button
+                  className="mt-4"
+                  variant={!darkMode ? "outline" : "default"}
+                >
+                  View Details
+                </Button>
+              </Link>
+            ) : (
+              <Button
+                className="mt-4"
+                variant={!darkMode ? "outline" : "default"}
+              >
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center"
+                >
+                  View Project <ExternalLink className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
+            )}
+            {/* <Button
               className="mt-4"
               variant={!darkMode ? "outline" : "default"}
             >
@@ -43,7 +68,7 @@ export function Projects({ darkMode }: ProjectsProps) {
               >
                 View Project <ExternalLink className="ml-2 h-4 w-4" />
               </a>
-            </Button>
+            </Button> */}
           </motion.div>
         ))}
       </div>
