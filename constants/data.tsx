@@ -75,7 +75,7 @@ export const mockData = {
         description:
           '"Santa Escritura" es tu compañero espiritual digital, brindando acceso fácil y rápido a textos sagrados. Explora versículos, busca libros y capítulos, y sumérgete en una experiencia de estudio espiritual en esta aplicación intuitiva y amigable.',
         platform: "Google Play",
-        icon: <BookOpenText color="green" />,
+        icon: <BookOpenText color="#0b3e3d" />,
         link: "https://play.google.com/store/apps/details?id=com.louislam09.bible",
       },
       {
@@ -101,6 +101,59 @@ export const mockData = {
         icon: <Joystick color="lightblue" />,
 
         link: "https://github.com/Louislam09/connect-four",
+      },
+    ],
+    projects2: [
+      {
+        name: "Santa Escritura",
+        description:
+          '"Santa Escritura" es tu compañero espiritual digital, brindando acceso fácil y rápido a textos sagrados.',
+        longDescription:
+          '"Santa Escritura" is your digital spiritual companion, providing easy and quick access to sacred texts. This intuitive and user-friendly application allows users to explore verses, search for books and chapters, and immerse themselves in a spiritual study experience.',
+        platform: "Google Play",
+        link: "https://play.google.com/store/apps/details?id=com.louislam09.bible",
+        imageUrl: "/adaptive-icon.png",
+        features: [
+          "Extensive library of biblical texts",
+          "Powerful search functionality",
+          "Bookmarking and annotation tools",
+          "Offline access to scriptures",
+          "User-friendly interface",
+          "Multiple translations available",
+        ],
+        technologies: [
+          "React Native",
+          "Expo",
+          "JavaScript",
+          "RESTful APIs",
+          "AsyncStorage",
+        ],
+        learnings:
+          "Developing 'Santa Escritura' deepened my understanding of mobile app development and working with large datasets. It also taught me the importance of creating intuitive user interfaces for diverse user groups.",
+      },
+      {
+        name: "ConnectFour Game",
+        description:
+          "A multiplayer game created using FrontEnd HTML5 and CSS3, and BackEnd NodeJs with Express.js and Socket.io for player communication with integrated voice chat via PeerJS.",
+        link: "https://connect-four-09.herokuapp.com/",
+        imageUrl: "/connect-four.png", // Add this image to your public folder
+        features: [
+          "Real-time multiplayer gameplay",
+          "Integrated voice chat",
+          "Responsive design for various devices",
+          "Custom room creation and joining",
+        ],
+        technologies: [
+          "HTML5",
+          "CSS3",
+          "JavaScript",
+          "Node.js",
+          "Express.js",
+          "Socket.io",
+          "PeerJS",
+        ],
+        learnings:
+          "Building ConnectFour Game enhanced my skills in real-time web applications and taught me how to implement peer-to-peer communication in web browsers.",
       },
     ],
     links: {
@@ -237,6 +290,59 @@ export const mockData = {
         icon: <Joystick color="lightblue" />,
 
         link: "https://github.com/Louislam09/connect-four",
+      },
+    ],
+    projects2: [
+      {
+        name: "Santa Escritura",
+        description:
+          '"Santa Escritura" es tu compañero espiritual digital, brindando acceso fácil y rápido a textos sagrados.',
+        longDescription:
+          '"Santa Escritura" is your digital spiritual companion, providing easy and quick access to sacred texts. This intuitive and user-friendly application allows users to explore verses, search for books and chapters, and immerse themselves in a spiritual study experience.',
+        platform: "Google Play",
+        link: "https://play.google.com/store/apps/details?id=com.louislam09.bible",
+        imageUrl: "/adaptive-icon.png",
+        features: [
+          "Extensive library of biblical texts",
+          "Powerful search functionality",
+          "Bookmarking and annotation tools",
+          "Offline access to scriptures",
+          "User-friendly interface",
+          "Multiple translations available",
+        ],
+        technologies: [
+          "React Native",
+          "Expo",
+          "JavaScript",
+          "RESTful APIs",
+          "AsyncStorage",
+        ],
+        learnings:
+          "Developing 'Santa Escritura' deepened my understanding of mobile app development and working with large datasets. It also taught me the importance of creating intuitive user interfaces for diverse user groups.",
+      },
+      {
+        name: "ConnectFour Game",
+        description:
+          "A multiplayer game created using FrontEnd HTML5 and CSS3, and BackEnd NodeJs with Express.js and Socket.io for player communication with integrated voice chat via PeerJS.",
+        link: "https://connect-four-09.herokuapp.com/",
+        imageUrl: "/connect-four.png", // Add this image to your public folder
+        features: [
+          "Real-time multiplayer gameplay",
+          "Integrated voice chat",
+          "Responsive design for various devices",
+          "Custom room creation and joining",
+        ],
+        technologies: [
+          "HTML5",
+          "CSS3",
+          "JavaScript",
+          "Node.js",
+          "Express.js",
+          "Socket.io",
+          "PeerJS",
+        ],
+        learnings:
+          "Building ConnectFour Game enhanced my skills in real-time web applications and taught me how to implement peer-to-peer communication in web browsers.",
       },
     ],
     links: {

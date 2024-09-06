@@ -16,7 +16,7 @@ export function Projects({ darkMode }: ProjectsProps) {
     <section>
       <h2 className="text-2xl font-bold mb-4">Projects</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {mockData[language].projects.map((project, index) => (
+        {mockData[language].projects2.map((project, index) => (
           <motion.div
             key={project.name}
             initial={{ opacity: 0, scale: 0.9 }}
@@ -26,13 +26,13 @@ export function Projects({ darkMode }: ProjectsProps) {
             className="p-4 rounded-lg bg-opacity-10 bg-purple-500"
           >
             <h3 className="flex flex-row items-center gap-2 text-xl font-semibold">
-              <p>{project.icon}</p>
+              {/* <p>{project.icon}</p> */}
               <p>{project.name}</p>
             </h3>
             {project.description && (
               <p className="mt-2 text-sm">{project.description}</p>
             )}
-            {project.name === "Santa Escritura" ? (
+            {project.name === "ssSanta Escritura" ? (
               <Link href="/bible" passHref>
                 <Button
                   className="mt-4"
@@ -42,19 +42,28 @@ export function Projects({ darkMode }: ProjectsProps) {
                 </Button>
               </Link>
             ) : (
-              <Button
-                className="mt-4"
-                variant={!darkMode ? "outline" : "default"}
-              >
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center"
+              <div className="flex space-x-2 mt-4">
+                <Link
+                  href={`/projects/${project.name
+                    .toLowerCase()
+                    .replace(/\s+/g, "-")}`}
+                  passHref
                 >
-                  View Project <ExternalLink className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
+                  <Button variant={!darkMode ? "outline" : "default"}>
+                    View Details
+                  </Button>
+                </Link>
+                <Button variant={!darkMode ? "outline" : "default"}>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center"
+                  >
+                    Live Demo <ExternalLink className="ml-2 h-4 w-4" />
+                  </a>
+                </Button>
+              </div>
             )}
             {/* <Button
               className="mt-4"

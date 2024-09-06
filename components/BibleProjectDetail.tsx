@@ -30,12 +30,12 @@ export function BibleProjectDetail() {
           <p className="text-xl mb-8">Your Digital Spiritual Companion</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div className="flex justify-center items-center">
+            <div className="flex justify-start items-center">
               <Image
                 src="/adaptive-icon.png"
                 alt="Santa Escritura App Icon"
-                width={300}
-                height={300}
+                width={400}
+                height={400}
                 className="rounded-lg shadow-lg"
               />
             </div>
@@ -104,16 +104,17 @@ export function BibleProjectDetail() {
           <ul className="list-disc list-inside mb-8">
             <li>React Native</li>
             <li>Expo</li>
-            <li>JavaScript</li>
-            <li>RESTful APIs for Bible text retrieval</li>
+            <li>TypeScript</li>
+            <li>SQLite</li>
+            <li>RESTful APIs for Bible audio retrieval</li>
             <li>AsyncStorage for local data persistence</li>
+            <li>Etc.</li>
           </ul>
 
           <h2 className="text-2xl font-semibold mb-4">Future Enhancements</h2>
           <ul className="list-disc list-inside mb-8">
             <li>Multiple language support</li>
             <li>Audio playback of verses</li>
-            <li>Community features for sharing insights</li>
             <li>Integration with additional study resources</li>
           </ul>
 
